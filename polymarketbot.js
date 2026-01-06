@@ -1,6 +1,15 @@
 // Polymarket Telegram Monitoring Bot
 // Install dependencies: npm install node-telegram-bot-api node-fetch@2
+const TelegramBot = require('node-telegram-bot-api');
+const fetch = require('node-fetch');
 
+// Load token from Railway environment variables
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+
+console.log("TOKEN EXISTS:", !!TELEGRAM_BOT_TOKEN);
+
+// Initialize bot
+const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true });
 const TelegramBot = require("node-telegram-bot-api");
 const fetch = require("node-fetch");
 
@@ -230,4 +239,5 @@ setInterval(() => {
 monitorPolymarket().catch(console.error);
 
 console.log("Polymarket Telegram Bot started");
+
 
