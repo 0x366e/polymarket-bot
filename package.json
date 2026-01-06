@@ -1,12 +1,13 @@
 {
   "name": "polymarket-bot",
   "version": "1.0.0",
-  "main": "polybot.js",
+  "main": "polymarketbot.js",
   "scripts": {
-    "start": "node polybot.js"
+    "start": "node polymarketbot.js"
   },
   "dependencies": {
-    "node-fetch": "^2.6.7",
-    "node-telegram-bot-api": "^0.61.0"
+    "node-telegram-bot-api": "^0.64.0",
+    "node-fetch": "^2.6.9"
   }
 }
+
